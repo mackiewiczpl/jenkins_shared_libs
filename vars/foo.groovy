@@ -1,3 +1,4 @@
 def call(Map config = [:]) {
-	echo "Hello ${config.name}. Today is ${config.date}"
+	loadLinuxScript(scriptName: 'hello-world.sh')
+	bash "./hello_world.sh ${config.name} ${config.date}"
 }
